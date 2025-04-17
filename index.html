@@ -14,26 +14,44 @@
     </script>
 </head>
 <body>
-    <!-- 전화거는 a 태그의 경우 페이지를 넘기는 것도 아니라 전화를 거는 것이라 데이터수집이 안됩, 전화걸기가 얼마나 많이 실행되었는지 수집을 위해 전화걸기전에 데이터수집 후 실행되도록 골백함수로 처리 -->
-    <a href="tel:01000000000"  onclick="trackAndCall(event, '01000000000')">전화걸기</a>
-    <script type="text/javascript">
-        function trackAndCall(event, phoneNumber) {
-            // 기본 동작 중단
-            event.preventDefault();
+    <!-- 전화걸기 / 외부연동 -->
 
-            // 데이터 수집 로직
+    <a href="tel:01071281041"  onclick="trackAndCall(event, '01071281041')">전화걸기</a>
+    <script type="text/javascript">
+        function trackAndCall(event, phoneNumber) {                   
+            event.preventDefault();                  
             if (window.wcs) {
-                wcs.inflow("https://lim-yena.github.io/flona/"); 
+                wcs.inflow("https://4thdraw.github.io/4thdraw/"); 
                 var _conv = {};
                 _conv.type = "custom001"; 
-                wcs.trans(_conv); // 전환 데이터 전송
-            }
-
-            // 전화 연결
+                wcs.trans(_conv); 
+            }                  
             setTimeout(() => {
                 window.location.href = `tel:${phoneNumber}`;
-            }, 500); // 데이터 전송 후 0.5초 후 전화 연결
+            }, 500); 
         }
     </script>
+
+    
+
+    <a href="https://map.naver.com/p/entry/place/31222521?c=15.00,0,0,0,dh&placePath=/review" 
+        target="_blank" rel="noopener" onclick="trackNaverReservation(event)">
+        네이버예약                        
+    </a>
+
+    <script type="text/javascript">
+        function trackNaverReservation(event) {
+
+        event.preventDefault();
+        if (window.wcs) {
+        wcs.inflow("https://4thdraw.github.io/4thdraw/"); 
+        var _conv = {};
+        _conv.type = "purchase"; // 전환 유형 설정
+        wcs.trans(_conv); // 전환 데이터 전송
+        }
+        window.open("https://map.naver.com/p/entry/place/31222521?c=15.00,0,0,0,dh&placePath=/review", "_blank");
+        }
+    </script>
+
 </body>
 </html>
