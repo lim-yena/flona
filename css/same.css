@@ -1,0 +1,127 @@
+:root{
+    /* Color styles */
+    --black: rgba(0, 0, 0, 1);                 /* #000000 */
+    --deep_gray: rgba(17, 17, 17, 1);         /* #111111 */
+    --dark_gray: rgba(68, 68, 68, 1);        /* #444444 */
+    --middle_gray: rgba(170, 170, 170, 1);  /* #aaaaaa */
+    --light_gray: rgba(221, 221, 221, 1);  /* #dddddd */
+    --white: rgb(255, 255, 255);          /* #ffffff */
+
+    /* Text styles */
+    --font-family : 'Suit', sans-serif;
+
+
+    /* Text-size styles */
+    --typo: 15.625rem;       /* 250px*/
+    --main_tit: 2.5rem;     /* 40px */
+    --sub_tit: 1.875rem;   /* 30px */
+    --basic_txt: 1.25rem; /* 20px */
+
+
+    /* Text-weight styles */
+    --font-thin: 100;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --font-black: 900;
+    
+    
+    /* Text-space styles */
+    --semi_space: -0.2rem;
+    --basic_space: -0.1rem;
+    --typo_space: -1.25rem;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    letter-spacing: var(--basic_space, -0.1rem);
+    font-family: var(--font-family, 'Suit', sans-serif);
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    letter-spacing: var(--basic_space, -0.1rem);
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+    color:initial;
+    text-decoration: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+section {
+    width:90%;
+    margin:0 auto;
+}
+
+
+/* font */
+h2 {font-size:var(--typo, 15.625rem); font-weight:var(--font-extrabold, 800); letter-spacing: var(--typo_space, -1.25rem);}
+h3 {font-size:var(--main_tit, 2.5rem); font-weight:var(--font-extrabold, 800);}
+h4 {font-size:var(--sub_tit, 1.875rem);}
+h5 {font-size:var(--sub_tit, 1.25rem);}
+
+
+/* color */
+.black {color:var(--black,rgba(0, 0, 0, 1));}                        /* #000000 */
+.deep_gray {color:var(--deep_gray, rgba(17, 17, 17, 1));}           /* #111111 */
+.dark_gray {color:var(--dark_gray, rgba(68, 68, 68, 1));}          /* #444444 */
+.middle_gray {color:var(--middle_gray, rgba(170, 170, 170, 1));}  /* #aaaaaa */
+.light_gray {color:var(--light_gray, rgba(221, 221, 221, 1));}   /* #dddddd */
+.white {color:var(--white, (255, 255, 255));}                     /* #ffffff */
+
+
+/* background */
+.black_bg {background:var(--black,rgba(0, 0, 0, 1))}
+.white_bg {background:var(--white, (255, 255, 255));}
+
+
+/* same */
+.d-flex {display:flex;}
+.jcc {justify-content: center;}
+.jcs {justify-content: space-between;}
+.aic {align-items: center;}
